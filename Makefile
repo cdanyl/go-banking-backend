@@ -74,6 +74,10 @@ migrateup: ## Apply all or N up migrations
 migratedown: ## Apply all or N down migrations
 	migrate -path db/migration -database "postgres://root:password@192.168.50.151:5433/simple_bank?sslmode=disable" -verbose down
 
+.PHONY: sqlc
+sqlc: ## Generate Go code from SQL
+	sqlc generate
+
 help: ## Show this help
 	@echo ''
 	@echo 'Usage:'

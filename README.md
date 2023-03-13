@@ -41,6 +41,8 @@ make help               # Show all commands
 
 Check others commands using `make help`
 
+### Database
+
 ### Database Design
 
 - Design DB schema using dbdiagram.io
@@ -58,7 +60,15 @@ Check others commands using `make help`
 - Execute `make migratedown` to revert migration to a previous version
 - Manage migrations in future with `migration up/down` commands
 
-### Generate CRUD Golang code from SQL
+## Generate CRUD Golang code from SQL
 
 - Execute `make sqlc` to auto generate CRUD functionalities
 - Execute `make mock` to generate mock DB
+
+## Unit Tests
+
+### Pre-requisites
+- `pq` A pure Go postgres driver for Go's database/sql package
+- `Testify` Thou Shalt Write Tests
+
+Execute `make test`
